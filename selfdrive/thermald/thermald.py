@@ -192,7 +192,7 @@ def thermald_thread(end_event, hw_queue):
 
   fan_controller = None
 
-  dp_device_disable_temp_check = params.get_bool("dp_device_disable_temp_check")
+  ####dp_device_disable_temp_check = params.get_bool("dp_device_disable_temp_check")
 
   while not end_event.is_set():
     sm.update(PANDA_STATES_TIMEOUT)
@@ -282,9 +282,9 @@ def thermald_thread(end_event, hw_queue):
     # **** starting logic ****
 
     # Ensure date/time are valid
-    # now = datetime.datetime.utcnow()
-    # startup_conditions["time_valid"] = (now.year > 2020) or (now.year == 2020 and now.month >= 10)
-    # set_offroad_alert_if_changed("Offroad_InvalidTime", (not startup_conditions["time_valid"]))
+    ##### now = datetime.datetime.utcnow()
+    ##### startup_conditions["time_valid"] = (now.year > 2020) or (now.year == 2020 and now.month >= 10)
+    ##### set_offroad_alert_if_changed("Offroad_InvalidTime", (not startup_conditions["time_valid"]))
 
     # startup_conditions["up_to_date"] = params.get("Offroad_ConnectivityNeeded") is None or params.get_bool("DisableUpdates") or params.get_bool("SnoozeUpdate")
     startup_conditions["not_uninstalling"] = not params.get_bool("DoUninstall")
