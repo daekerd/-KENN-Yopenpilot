@@ -181,6 +181,7 @@ def thermald_thread(end_event, hw_queue):
   offroad_temp_filter = FirstOrderFilter(0., TEMP_TAU, DT_TRML)
   should_start_prev = False
   in_car = False
+  ######is_uno = False
   engaged_prev = False
 
   params = Params()
