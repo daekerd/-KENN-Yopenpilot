@@ -696,11 +696,11 @@ location set</source>
     <name>PrimeAdWidget</name>
     <message>
         <source>Upgrade Now</source>
-        <translation>지금 업그레이드</translation>
+        <translation>네이버 전기차동호회</translation>
     </message>
     <message>
         <source>Become a comma prime member at connect.comma.ai</source>
-        <translation>connect.comma.ai 접속 comma prime 가입</translation>
+        <translation>네이버 볼트 조합 에 가입</translation>
     </message>
     <message>
         <source>PRIME FEATURES:</source>
