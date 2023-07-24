@@ -79,13 +79,13 @@ class CarInterface(CarInterfaceBase):
     else:
       ret.transmissionType = TransmissionType.automatic
 
-    ret.longitudinalTuning.deadzoneBP = [0., 8.]
+    ret.longitudinalTuning.deadzoneBP = [0., 9.]
     ret.longitudinalTuning.deadzoneV = [.0, .15]
 
     ###ret.longitudinalTuning.kpBP = [5., 35.]
     ###ret.longitudinalTuning.kiBP = [0.]
     ret.longitudinalTuning.kpBP = [0., 5., 20.]
-    ret.longitudinalTuning.kiBP = [0., 12., 27.]
+    ret.longitudinalTuning.kiBP = [1.3, 1.0, 0.7]
 
     if candidate in CAMERA_ACC_CAR:
       ret.experimentalLongitudinalAvailable = True
@@ -100,7 +100,7 @@ class CarInterface(CarInterfaceBase):
       ###ret.longitudinalTuning.kpV = [1.4, 0.5]
       ###ret.longitudinalTuning.kiV = [0.4]
       ret.longitudinalTuning.kpV = [1.3, 1.0, 0.7]
-      ret.longitudinalTuning.kiV = [.30, .17, .08]
+      ret.longitudinalTuning.kiV = [.35, .20, .1]
 
       ret.stoppingDecelRate = 2  # # reach stopping target smoothly
       ret.vEgoStopping = 0.25
@@ -122,7 +122,7 @@ class CarInterface(CarInterfaceBase):
 
       # Tuning
       ret.longitudinalTuning.kpV = [1.3, 1.0, 0.7]
-      ret.longitudinalTuning.kiV = [.30, .17, .08]
+      ret.longitudinalTuning.kiV = [.35, .20, .1]
 
     # These cars have been put into dashcam only due to both a lack of users and test coverage.
     # These cars likely still work fine. Once a user confirms each car works and a test route is
